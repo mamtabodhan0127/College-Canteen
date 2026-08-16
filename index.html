@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Bites - College Canteen</title>
+    <link rel="stylesheet" href="canteen.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <h2>🍴 Campus <span>Bites</span></h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#offers">Offers</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button onclick="openCart()">🛒 Cart (<b id="count">0</b>)</button>
+</header>
+
+
+<!-- HOME -->
+<section class="hero" id="home">
+    <div>
+        <p>WELCOME TO CAMPUS BITES</p>
+        <h1>Good Food.<br><span>Great Mood.</span></h1>
+        <p>Your favourite college canteen for fresh, tasty and affordable food.</p>
+        <a href="#menu">Explore Menu →</a>
+    </div>
+</section>
+
+
+<!-- FEATURES -->
+<section class="features">
+    <div>🥗<h3>Fresh Food</h3><p>Prepared fresh every day.</p></div>
+    <div>💰<h3>Affordable</h3><p>Student friendly prices.</p></div>
+    <div>🧼<h3>Hygienic</h3><p>Clean and safe food.</p></div>
+    <div>⚡<h3>Quick Service</h3><p>Less waiting time.</p></div>
+</section>
+
+
+<!-- MENU -->
+<!-- MENU -->
+<section id="menu">
+
+    <h2 class="title">Our Menu</h2>
+    <p class="sub">Choose your favourite food</p>
+
+    <input
+        class="search"
+        id="search"
+        placeholder="🔎 Search food..."
+        onkeyup="searchFood()"
+    >
+
+    <div class="menu">
+
+        <div class="food">
+            <div class="pic">
+                <img src="veg burger.jpg" alt="Veg Burger">
+            </div>
+            <h3>Veg Burger</h3>
+            <p>Fresh vegetable burger</p>
+            <b>₹60</b>
+            <button onclick="add('Veg Burger',60)">+ Add</button>
+        </div>
+
+
+        <div class="food">
+            <div class="pic">
+                <img src="veg sandwich.webp" alt="Veg Sandwich">
+            </div>
+            <h3>Veg Sandwich</h3>
+            <p>Fresh and tasty sandwich</p>
+            <b>₹40</b>
+            <button onclick="add('Veg Sandwich',40)">+ Add</button>
+        </div>
+
+
+        <div class="food">
+            <div class="pic">
+                <img src="veg pizza.jpg" alt="Veg Pizza">
+            </div>
+            <h3>Veg Pizza</h3>
+            <p>Cheesy vegetable pizza</p>
+            <b>₹90</b>
+            <button onclick="add('Veg Pizza',90)">+ Add</button>
+        </div>
+
+
+        <div class="food">
+            <div class="pic">
+                <img src="veg thali.jpg" alt="Veg Thali">
+            </div>
+            <h3>Veg Thali</h3>
+            <p>Complete Indian meal</p>
+            <b>₹100</b>
+            <button onclick="add('Veg Thali',100)">+ Add</button>
+        </div>
+
+
+        <div class="food">
+            <div class="pic">
+                <img src="veg noodles.jpg" alt="Veg Noodles">
+            </div>
+            <h3>Veg Noodles</h3>
+            <p>Hot spicy noodles</p>
+            <b>₹70</b>
+            <button onclick="add('Veg Noodles',70)">+ Add</button>
+        </div>
+
+
+        <div class="food">
+            <div class="pic">
+                <img src="juice.webp" alt="Fresh Juice">
+            </div>
+            <h3>Fresh Juice</h3>
+            <p>Refreshing fruit juice</p>
+            <b>₹40</b>
+            <button onclick="add('Fresh Juice',40)">+ Add</button>
+        </div>
+
+
+        <div class="food">
+            <div class="pic">
+                <img src="coffee.jpg" alt="Coffee">
+            </div>
+            <h3>Coffee</h3>
+            <p>Hot college coffee</p>
+            <b>₹25</b>
+            <button onclick="add('Coffee',25)">+ Add</button>
+        </div>
+
+
+        <div class="food">
+            <div class="pic">
+                <img src="ice creame.jpg" alt="Ice Cream">
+            </div>
+            <h3>Ice Cream</h3>
+            <p>Delicious dessert</p>
+            <b>₹40</b>
+            <button onclick="add('Ice Cream',40)">+ Add</button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- OFFERS -->
+<section id="offers" class="light">
+
+    <h2 class="title">🎁 Special Offers</h2>
+
+    <div class="offers">
+        <div>
+            <h3>🎓 Student Combo</h3>
+            <p>Burger + Fries + Drink for ₹120</p>
+        </div>
+
+        <div>
+            <h3>🔥 Friday Special</h3>
+            <p>10% OFF on selected items</p>
+        </div>
+
+        <div>
+            <h3>👥 Group Offer</h3>
+            <p>Buy 4 meals and get 1 drink FREE</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+
+    <h2 class="title">About Our Canteen</h2>
+
+    <div class="about">
+        <div>
+            <h2>Your Campus Food Destination</h2>
+            <p>
+                Campus Bites is a place where students can enjoy
+                fresh, tasty and affordable food between lectures.
+            </p>
+            <p>
+                We provide quick service, hygienic food and a
+                comfortable place to relax with friends.
+            </p>
+        </div>
+
+        <div class="facilities">
+            <h3>Our Facilities</h3>
+            <p>✓ Clean Kitchen</p>
+            <p>✓ Comfortable Seating</p>
+            <p>✓ Fresh Food</p>
+            <p>✓ Affordable Prices</p>
+            <p>✓ Quick Service</p>
+        </div>
+    </div>
+
+</section>
+
+
+<!-- TIMINGS -->
+<section class="light">
+
+    <h2 class="title">🕐 Canteen Timings</h2>
+
+    <div class="timings">
+        <p><b>Monday - Friday</b> <span>8 AM - 6 PM</span></p>
+        <p><b>Saturday</b> <span>8 AM - 3 PM</span></p>
+        <p><b>Sunday</b> <span>Closed</span></p>
+    </div>
+
+</section>
+
+
+<!-- FEEDBACK -->
+<section>
+
+    <h2 class="title">💬 Student Feedback</h2>
+
+    <form class="feedback" onsubmit="alert('Thank you for your feedback!'); return false;">
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <select required>
+            <option value="">Select Rating</option>
+            <option>⭐⭐⭐⭐⭐ Excellent</option>
+            <option>⭐⭐⭐⭐ Very Good</option>
+            <option>⭐⭐⭐ Good</option>
+        </select>
+
+        <textarea placeholder="Write your feedback..." required></textarea>
+
+        <button>Submit Feedback</button>
+
+    </form>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+
+    <h2 class="title">📞 Contact Us</h2>
+
+    <div class="contact-box">
+        <div>📍<h3>Location</h3><p>College Main Campus</p></div>
+        <div>📱<h3>Phone</h3><p>+91 98765 43210</p></div>
+        <div>📧<h3>Email</h3><p>canteen@college.edu</p></div>
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+    <h2>🍴 Campus Bites</h2>
+    <p>Good Food • Great Mood • Great Memories</p>
+    <p>© 2026 Campus Bites</p>
+</footer>
+
+
+<!-- CART -->
+<div class="overlay" id="cartBox">
+
+    <div class="cart">
+
+        <button class="close" onclick="closeCart()">×</button>
+
+        <h2>🛒 Your Cart</h2>
+
+        <div id="items">
+            <p>Your cart is empty.</p>
+        </div>
+
+        <hr>
+
+        <h3>Total: ₹<span id="total">0</span></h3>
+
+        <button class="checkout" onclick="checkout()">
+            Confirm Order
+        </button>
+
+    </div>
+</div>
+
+
+<!-- ORDER CONFIRMATION -->
+<div class="overlay" id="orderBox">
+
+    <div class="confirmation">
+
+        <h2>✅ Order Confirmed!</h2>
+
+        <p>Your order has been placed successfully.</p>
+
+        <div class="token">
+            <small>Your Token Number</small>
+            <strong id="token">CB-1000</strong>
+        </div>
+
+        <p>Show this token at the canteen counter.</p>
+
+        <button onclick="closeOrder()">Done</button>
+
+    </div>
+</div>
+
+
+<!-- SMALL JAVASCRIPT -->
+<script>
+
+let cart = [];
+let token = 1000;
+
+function add(name, price) {
+
+    let item = cart.find(x => x.name == name);
+
+    if (item)
+        item.qty++;
+    else
+        cart.push({name, price, qty:1});
+
+    update();
+}
+
+
+function update() {
+
+    let html = "";
+    let total = 0;
+    let count = 0;
+
+    cart.forEach((x,i) => {
+
+        total += x.price * x.qty;
+        count += x.qty;
+
+        html += `
+        <div class="cart-item">
+
+            <span>
+                ${x.name} × ${x.qty}
+            </span>
+
+            <span>
+                ₹${x.price * x.qty}
+
+                <button onclick="minus(${i})">−</button>
+                <button onclick="plus(${i})">+</button>
+            </span>
+
+        </div>`;
+
+    });
+
+    document.getElementById("items").innerHTML =
+        html || "<p>Your cart is empty.</p>";
+
+    document.getElementById("total").innerText = total;
+    document.getElementById("count").innerText = count;
+}
+
+
+function plus(i) {
+    cart[i].qty++;
+    update();
+}
+
+
+function minus(i) {
+
+    cart[i].qty--;
+
+    if (cart[i].qty == 0)
+        cart.splice(i,1);
+
+    update();
+}
+
+
+function openCart() {
+    document.getElementById("cartBox").style.display = "flex";
+}
+
+
+function closeCart() {
+    document.getElementById("cartBox").style.display = "none";
+}
+
+
+function checkout() {
+
+    if (cart.length == 0) {
+        alert("Please add food to your cart first.");
+        return;
+    }
+
+    token++;
+
+    document.getElementById("token").innerText =
+        "CB-" + token;
+
+    closeCart();
+
+    document.getElementById("orderBox").style.display = "flex";
+
+    cart = [];
+    update();
+}
+
+
+function closeOrder() {
+    document.getElementById("orderBox").style.display = "none";
+}
+
+
+function searchFood() {
+
+    let value =
+        document.getElementById("search").value.toLowerCase();
+
+    document.querySelectorAll(".food").forEach(x => {
+
+        x.style.display =
+            x.innerText.toLowerCase().includes(value)
+            ? "block"
+            : "none";
+
+    });
+}
+
+</script>
+
+</body>
+</html>
